@@ -16,6 +16,6 @@ class lab_task_4{
 		System.out.println("Short = " + s);
 		System.out.println("Char = " + c);
 		System.out.println("Double = " + d);
-		System.out.println("\nstring = " + str);
+		System.out.println("string = " + str);
 	}
 }
