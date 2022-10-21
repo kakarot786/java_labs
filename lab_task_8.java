@@ -1,3 +1,4 @@
+//test
 import java.util.*;
 
 class lab_task_8{
