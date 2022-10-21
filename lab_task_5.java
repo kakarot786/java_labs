@@ -1,8 +1,10 @@
+//Making a program to take login details as input.
 import java.util.*;
 
 class lab_task_5{
 	public static void main(String[] args){
 		int flag = 0, email_yes = 0, password_yes = 0,i;
+		//Making a database for the input details to be checked.
 		String checker, limit = "1234567",email,password;
 		String[][] userinfo = { {"a@gmail.com","01234567"},
 								{"b@gmail.com","12345678"},
@@ -11,8 +13,10 @@ class lab_task_5{
 								{"e@gmail.com","12442169"}
 		};
 			Scanner sc = new Scanner(System.in);
+			//Taking email input.
 			System.out.println("Enter Your Email Address: ");
 			email = sc.nextLine();
+			//Taking password input with limitations.
 			while(true){
 			System.out.println("Enter Your Password: ");
 			password = sc.nextLine();
@@ -24,6 +28,7 @@ class lab_task_5{
 				continue;
 			}
 			}
+			//Checking if the email exists.
 		for(i=0;i<5;i++){
 			checker = userinfo[i][0];
 			if(checker.equalsIgnoreCase(email)){
@@ -32,6 +37,7 @@ class lab_task_5{
 				break;
 			}
 		}
+		//Checking if the password exists.
 		for(i=0;i<5;i++){
 			if(flag == 0){
 				// System.out.println("No Email Found.");
@@ -43,6 +49,7 @@ class lab_task_5{
 				break;
 			}
 		}
+		//Printing the results.
 		if(email_yes == 1 && password_yes == 1){
 			System.out.println("Welcome To Your Profile.");
 		}
