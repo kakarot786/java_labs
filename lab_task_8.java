@@ -1,17 +1,19 @@
-//test
+//Performing all the basic arithmetic operations.
 import java.util.*;
 
 class lab_task_8{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter First Number: ");
+		//Taking Input
+		System.out.println("Enter First & Second Number: ");
 		double num1 = sc.nextDouble();
-		System.out.println("Enter Second Number: ");
 		double num2 = sc.nextDouble();
+		//Asking user to select the operation.
 		System.out.println("Which Arithmetic Operation Would You Like To Perform?");
 		System.out.println("Press 1) for Division, 2) for Multiplication, 3) for Addition, 4) for Subtraction");
 		int operation = sc.nextInt();
 		double calc = 0;
+		//Using switch to perform the selected operation.
 		switch(operation){
 			case 1:
 				calc = num1/num2;
