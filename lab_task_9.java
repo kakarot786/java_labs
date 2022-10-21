@@ -5,7 +5,7 @@ class lab_task_9{
 		//Printing the first 2 terms.
 		System.out.print(t1+" "+t2);
 		//Starting loop from 2 because 2 terms already printed.
-		for(int i = 2; i<10;++i)
+		for(int i = 2; i<20;++i)
 		{
 			t3 = t1 + t2;
 			System.out.print(" "+t3);

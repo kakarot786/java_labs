@@ -10,7 +10,7 @@ class lab_task_8{
 		double num2 = sc.nextDouble();
 		//Asking user to select the operation.
 		System.out.println("Which Arithmetic Operation Would You Like To Perform?");
-		System.out.println("Press 1) for Division, 2) for Multiplication, 3) for Addition, 4) for Subtraction");
+		System.out.println("Press: \n1) for Division\n2) for Multiplication\n3) for Addition\n4) for Subtraction");
 		int operation = sc.nextInt();
 		double calc = 0;
 		//Using switch to perform the selected operation.
