@@ -1,3 +1,4 @@
+//Printing out all the escape characters and displaying their results.
 class lab_task_7{
 	public static void main(String args){
 		System.out.println("Result of \\t = \t tab spaces");

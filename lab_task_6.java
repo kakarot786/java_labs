@@ -1,11 +1,14 @@
+//Using switch to present a menu.
 import java.util.*;
 
 class lab_task_6{
 	public static void main(String[] args){
 		int a;
 		Scanner sc = new Scanner(System.in);
+		//Printing out the options and Taking user input.
 		System.out.println("Welcome To Our Restaurant! Press The Following Codes For Menu Item Prices: \n1) Chicken Borgir\n2) Beef Borgir\n3) Cheese Borgir\n4)Pizza\n5)Fries");
 		int a = sc.nextInt();
+		//Using switch to display price for the selected item.
 		switch(a){
 			case 1:
 				System.out.println("Chicken Borgir = Rs.100");
