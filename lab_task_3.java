@@ -5,16 +5,19 @@ class lab_task_3 {
 		float matric,inter,entry,cpn;
 		Scanner obj = new Scanner(System.in);
               // Taking First User Input
-		System.out.println("Enter Your Matriculation Percentage: ");
+		System.out.println("Enter Your Matriculation Marks: ");
 		matric = obj.nextFloat();
               // Taking Second User Input
-		System.out.println("Enter Your Intermediate Percentage: ");
+		System.out.println("Enter Your Intermediate Marks: ");
 		inter = obj.nextFloat();
               // Taking Third User Input
-		System.out.println("Enter Your Entry Test Percentage: ");
+		System.out.println("Enter Your Entry Test Marks: ");
 		entry = obj.nextFloat();
               // Applying Formula
-		cpn = (matric * 10)/100 + (inter * 30)/100 + (entry * 60)/100;
+			  float matric_percent = (matric/850)*100;
+			  float inter_percent = (inter/1100)*100;
+			  float entry_percent = (entry/100)*100;
+		cpn = (matric_percent * 10)/100 + (inter_percent * 30)/100 + (entry_percent * 60)/100;
 		System.out.println("Your CPN is: " + cpn);
 	}
 }
