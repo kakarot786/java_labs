@@ -3,10 +3,10 @@ import java.util.*;
 
 class lab_task_5{
 	public static void main(String[] args){
-		int flag = 0, email_yes = 0, password_yes = 0,i;
-		char choice;
+		int flag = 0,password_yes = 0,i,email_yes = 0;
+		char choice = 'n';
+		String checker_e,checker_p, limit = "12345678",email,password;        
 		//Making a database for the input details to be checked.
-		String checker, limit = "1234567",email,password;
 		String[][] userinfo = { {"a@gmail.com","01234567"},
 								{"b@gmail.com","12345678"},
 								{"c@gmail.com","135791113"},
@@ -32,42 +32,43 @@ class lab_task_5{
 				}
 			}
 			//Checking if the email exists.
+            for(i=0;i<5;i++){
+                checker_e = userinfo[i][0];
+				if(checker_e.equalsIgnoreCase(email)){
+                    email_yes = 1;
+                }             
+            }
+            if(email_yes != 1){
+                System.out.println("Wrong Email Entered!");
+            }
+            //Checking if the password of the email exists.
 			for(i=0;i<5;i++){
-				checker = userinfo[i][0];
-				if(checker.equalsIgnoreCase(email)){
-				flag = 1;
-				email_yes = 1;
-				break;
-				}
+				checker_e = userinfo[i][0];
+                checker_p = userinfo[i][1];
+                if(email_yes != 1){
+                    break;
+                }
+                else if((checker_e.equalsIgnoreCase(email)) && (checker_p.equals(password))){
+                    choice = 'n';
+                   System.out.println("Welcome To Your Profile!");
+                   flag = 1;
+                   password_yes = 1;
+                   break; 
+                }
+                if(!checker_p.equals(password)){
+                    password_yes = 0;
+                }                   
 			}
-			//Checking if the password exists.
-			for(i=0;i<5;i++){
-				if(flag == 0){
-					break;
-				}
-				checker = userinfo[i][1];
-				if(checker.equals(password)){
-					password_yes = 1;
-					break;
-				}
-			}
-			if(email_yes == 1 && password_yes == 1)
-			{
-				break;
-			}
-			else if(email_yes == 1 && password_yes == 0){
-				System.out.println("Wrong Password Entered!");
-			}
-			else{
-				System.out.println("Wrong Email or Password Entered! Please Try Again.");
-			}
-			//Prompting the user if he/her wants to run the program incase of a login failure.
-			System.out.println("Would You Like To Try Again?  (y/n)");
+			//Prompting the user if he/she wants to run the program incase of a login failure.
+            if(password_yes == 0){
+                System.out.println("Wrong Password Entered! Please Try Again.");
+            }
+            if(flag == 0){
+            System.out.println("Would You Like To Try Again?  (y/n)");
 			choice = sc.next().charAt(0);
 			sc.nextLine();
+            }
 		}
 		while(choice == 'y' || choice == 'Y');
-		//Printing the results.
-		System.out.println("Welcome To Your Profile.");
 	}
 }
