@@ -46,6 +46,7 @@ class lab_task_5{
 				checker_e = userinfo[i][0];
                 checker_p = userinfo[i][1];
                 if(email_yes != 1){
+					password_yes = 1;
                     break;
                 }
                 else if((checker_e.equalsIgnoreCase(email)) && (checker_p.equals(password))){
