@@ -32,15 +32,18 @@ class DynamicArray{
     }
 
 }
-public class Main {
+ class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         DynamicArray obj = new DynamicArray();
-        System.out.println("How Many Elements Would You Like To Enter?");
-        int loop = sc.nextInt();
-        System.out.println("Enter The Elements Of The Array: ");
-        for (int i = 0; i<loop; i++){
-            obj.insert(sc.nextInt());
+        System.out.println("Enter The Elements Of The Array ");
+        System.out.println("Press 0 When You're Done: ");
+        while (true) {
+            int element = sc.nextInt();
+            if(element == 0) {
+                break;
+            }
+                obj.insert(element);
         }
         obj.print();
     }
